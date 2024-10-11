@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/page/index.css">
+    <style media="all">
+        body {
+            font-family: "vazir-rd-ui-fd-light";
+        }
+        main {
+            width: 75% ;
+            margin: 90px auto;
+        }
+        .field-row {
+            margin-bottom: 65px;
+        }
+        #field1 {
+            text-indent: 34px;
+        }
+        #field2 {
+            text-indent: 55px;
+        }
+        #field3 {
+            text-indent: 100px;
+        }
+        #field4 {
+            text-indent: 75px;
+        }
+        .main-content .row {
+
+        }
+        .col-md-3.col-sm-4.col-xs-6.demo-col {
+            display: flex ;
+            justify-content: center ;
+            margin-bottom: 15px;
+        }
+    </style>
+    <script type="module">
+        import MaterialFileField from "./js/Component/MaterialFileField.js";
+
+        const fileInput = window.document.body.querySelector("input[type=file]");
+        const resultElement = window.document.body.querySelector(".file-selector strong");
+        const clearElement = window.document.body.querySelector(".material-file-field-clear");
+        window.console.log(clearElement);
+        const fileField = new MaterialFileField(fileInput , resultElement , clearElement);
+    </script>
+</head>
+<body>
+    <main>
+        <div class="field-row">
+            <input id="field1">
+            <label for="field1">نام :</label>
+            <div class="underline"></div>
+        </div>
+
+        <div class="field-row">
+            <input type="text" name="field2" id="field2">
+            <label for="field2">
+                <i class="fa-solid fa-user"></i>
+                نام :
+            </label>
+            <div class="underline"></div>
+        </div>
+
+        <div class="field-row">
+            <textarea id="field3"></textarea>
+            <label for="field3">
+                خلاصه مقاله :
+            </label>
+            <div class="underline"></div>
+        </div>
+
+        <div class="field-row">
+            <textarea id="field4"></textarea>
+            <label for="field4">
+                <i class="fa-solid fa-newspaper"></i>
+                محتوا :
+            </label>
+        </div>
+
+        <div class="field-row material-select-row">
+            <label for="field5">
+                <i class="fa-solid fa-shapes"></i>
+                دسته بندی :
+            </label>
+            <div class="material-select-container">
+                <select id="field5">
+                    <option>تکنولوژی</option>
+                    <option>طراحی وب</option>
+                    <option>برنامه نویسی</option>
+                </select>
+                <div class="underline"></div>
+            </div>
+        </div>
+
+        <div class="field-row material-multiple-select-row">
+            <select id="field6" multiple>
+                <option value="">#طراحی وب</option>
+                <option value="">#html</option>
+                <option value="">#css</option>
+                <option value="">#javascript</option>
+            </select>
+            <label for="field6">
+                <i class="fa-solid fa-tags"></i>
+                تگ ها :
+            </label>
+            <div class="underline"></div>
+        </div>
+        <div class="field-row material-file-field-row">
+            <div class="file-selector">
+                <p>
+                    <i class="fa-solid fa-image"></i>
+                    <strong>
+                        انتخاب عکس
+                    </strong>
+                    <i class="fa-solid fa-trash-alt material-file-field-clear"></i>
+                </p>
+            </div>
+            <input type="file" >
+        </div>
+
+
+
+
+        <section class="main-content">
+            <h2 id="icheck-bootstrap">چک باکس و  دکمه های رادیو متریال </h2>
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-6 demo-col">
+                    <div class="icheck-material-red">
+                        <input type="checkbox" checked="" id="red">
+                        <label for="red">قرمز</label>
+                    </div>
+                    <div class="icheck-material-red">
+                        <input type="radio" id="red1" name="red">
+                        <label for="red1">قرمز 1</label>
+                    </div>
+                    <div class="icheck-material-red">
+                        <input type="radio" checked="" id="red2" name="red">
+                        <label for="red2">قرمز 2</label>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 demo-col">
+                    <div class="icheck-material-pink">
+                        <input type="checkbox" checked="" id="pink">
+                        <label for="pink">صورتی</label>
+                    </div>
+                    <div class="icheck-material-pink">
+                        <input type="radio" id="pink1" name="pink">
+                        <label for="pink1">صورتی 1</label>
+                    </div>
+                    <div class="icheck-material-pink">
+                        <input type="radio" checked="" id="pink2" name="pink">
+                        <label for="pink2">صورتی 2</label>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 demo-col">
+                    <div class="icheck-material-purple">
+                        <input type="checkbox" checked="" id="purple">
+                        <label for="purple">بنفش</label>
+                    </div>
+                    <div class="icheck-material-purple">
+                        <input type="radio" id="purple1" name="purple">
+                        <label for="purple1">بنفش 1</label>
+                    </div>
+                    <div class="icheck-material-purple">
+                        <input type="radio" checked="" id="purple2" name="purple">
+                        <label for="purple2">بنفش 2</label>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 demo-col">
+                    <div class="icheck-material-deeppurple">
+                        <input type="checkbox" checked="" id="deeppurple">
+                        <label for="deeppurple">بنفش پر رنگ</label>
+                    </div>
+                    <div class="icheck-material-deeppurple">
+                        <input type="radio" id="deeppurple1" name="deeppurple">
+                        <label for="deeppurple1">بنفش پر رنگ 1</label>
+                    </div>
+                    <div class="icheck-material-deeppurple">
+                        <input type="radio" checked="" id="deeppurple2" name="deeppurple">
+                        <label for="deeppurple2">بنفش پر رنگ 2</label>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 demo-col">
+                    <div class="icheck-material-indigo">
+                        <input type="checkbox" checked="" id="indigo">
+                        <label for="indigo">نیلی</label>
+                    </div>
+                    <div class="icheck-material-indigo">
+                        <input type="radio" id="indigo1" name="indigo">
+                        <label for="indigo1">نیلی 1</label>
+                    </div>
+                    <div class="icheck-material-indigo">
+                        <input type="radio" checked="" id="indigo2" name="indigo">
+                        <label for="indigo2">نیلی 2</label>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 demo-col">
+                    <div class="icheck-material-blue">
+                        <input type="checkbox" checked="" id="blue">
+                        <label for="blue">آبی</label>
+                    </div>
+                    <div class="icheck-material-blue">
+                        <input type="radio" id="blue1" name="blue">
+                        <label for="blue1">آبی 1</label>
+                    </div>
+                    <div class="icheck-material-blue">
+                        <input type="radio" checked="" id="blue2" name="blue">
+                        <label for="blue2">آبی 2</label>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 demo-col">
+                    <div class="icheck-material-lightblue">
+                        <input type="checkbox" checked="" id="lightblue">
+                        <label for="lightblue">آبی روشن</label>
+                    </div>
+                    <div class="icheck-material-lightblue">
+                        <input type="radio" id="lightblue1" name="lightblue">
+                        <label for="lightblue1">آبی روشن</label>
+                    </div>
+                    <div class="icheck-material-lightblue">
+                        <input type="radio" checked="" id="lightblue2" name="lightblue">
+                        <label for="lightblue2">آبی روشن</label>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 demo-col">
+                    <div class="icheck-material-cyan">
+                        <input type="checkbox" checked="" id="cyan">
+                        <label for="cyan">یشمی</label>
+                    </div>
+                    <div class="icheck-material-cyan">
+                        <input type="radio" id="cyan1" name="cyan">
+                        <label for="cyan1">یشمی 1</label>
+                    </div>
+                    <div class="icheck-material-cyan">
+                        <input type="radio" checked="" id="cyan2" name="cyan">
+                        <label for="cyan2">یشمی 2</label>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 demo-col">
+                    <div class="icheck-material-teal">
+                        <input type="checkbox" checked="" id="teal">
+                        <label for="teal">سبز پر رنگ</label>
+                    </div>
+                    <div class="icheck-material-teal">
+                        <input type="radio" id="teal1" name="teal">
+                        <label for="teal1">سبز پر رنگ 1</label>
+                    </div>
+                    <div class="icheck-material-teal">
+                        <input type="radio" checked="" id="teal2" name="teal">
+                        <label for="teal2">سبز پر رنگ 2</label>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 demo-col">
+                    <div class="icheck-material-green">
+                        <input type="checkbox" checked="" id="green">
+                        <label for="green">سبز</label>
+                    </div>
+                    <div class="icheck-material-green">
+                        <input type="radio" id="green1" name="green">
+                        <label for="green1">سبز 1</label>
+                    </div>
+                    <div class="icheck-material-green">
+                        <input type="radio" checked="" id="green2" name="green">
+                        <label for="green2">سبز 2</label>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 demo-col">
+                    <div class="icheck-material-lightgreen">
+                        <input type="checkbox" checked="" id="lightgreen">
+                        <label for="lightgreen">سبز روشن</label>
+                    </div>
+                    <div class="icheck-material-lightgreen">
+                        <input type="radio" id="lightgreen1" name="lightgreen">
+                        <label for="lightgreen1">سبز روشن 1</label>
+                    </div>
+                    <div class="icheck-material-lightgreen">
+                        <input type="radio" checked="" id="lightgreen2" name="lightgreen">
+                        <label for="lightgreen2">سبز روشن 2</label>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 demo-col">
+                    <div class="icheck-material-lime">
+                        <input type="checkbox" checked="" id="lime">
+                        <label for="lime">لیمویی</label>
+                    </div>
+                    <div class="icheck-material-lime">
+                        <input type="radio" id="lime1" name="lime">
+                        <label for="lime1">لیمویی 1</label>
+                    </div>
+                    <div class="icheck-material-lime">
+                        <input type="radio" checked="" id="lime2" name="lime">
+                        <label for="lime2">لیمویی 2</label>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 demo-col">
+                    <div class="icheck-material-yellow">
+                        <input type="checkbox" checked="" id="yellow">
+                        <label for="yellow">زرد</label>
+                    </div>
+                    <div class="icheck-material-yellow">
+                        <input type="radio" id="yellow1" name="yellow">
+                        <label for="yellow1">زرد 1</label>
+                    </div>
+                    <div class="icheck-material-yellow">
+                        <input type="radio" checked="" id="yellow2" name="yellow">
+                        <label for="yellow2">زرد 2</label>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 demo-col">
+                    <div class="icheck-material-amber">
+                        <input type="checkbox" checked="" id="amber">
+                        <label for="amber">نارنجی کم رنگ</label>
+                    </div>
+                    <div class="icheck-material-amber">
+                        <input type="radio" id="amber1" name="amber">
+                        <label for="amber1">نارنجی کم رنگ 1</label>
+                    </div>
+                    <div class="icheck-material-amber">
+                        <input type="radio" checked="" id="amber2" name="amber">
+                        <label for="amber2">نارنجی کم رنگ 2</label>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 demo-col">
+                    <div class="icheck-material-orange">
+                        <input type="checkbox" checked="" id="orange">
+                        <label for="orange">نارنجی</label>
+                    </div>
+                    <div class="icheck-material-orange">
+                        <input type="radio" id="orange1" name="orange">
+                        <label for="orange1">نارنجی 1</label>
+                    </div>
+                    <div class="icheck-material-orange">
+                        <input type="radio" checked="" id="orange2" name="orange">
+                        <label for="orange2">نارنجی 2</label>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 demo-col">
+                    <div class="icheck-material-deeporange">
+                        <input type="checkbox" checked="" id="deeporange">
+                        <label for="deeporange">نارنجی پر رنگ</label>
+                    </div>
+                    <div class="icheck-material-deeporange">
+                        <input type="radio" id="deeporange1" name="deeporange">
+                        <label for="deeporange1">نارنجی پر رنگ 1</label>
+                    </div>
+                    <div class="icheck-material-deeporange">
+                        <input type="radio" checked="" id="deeporange2" name="deeporange">
+                        <label for="deeporange2">نارنجی پر رنگ 2</label>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 demo-col">
+                    <div class="icheck-material-brown">
+                        <input type="checkbox" checked="" id="brown">
+                        <label for="brown">قهوه ای</label>
+                    </div>
+                    <div class="icheck-material-brown">
+                        <input type="radio" id="brown1" name="brown">
+                        <label for="brown1">قهوه ای 1</label>
+                    </div>
+                    <div class="icheck-material-brown">
+                        <input type="radio" checked="" id="brown2" name="brown">
+                        <label for="brown2">قهوه ای 2</label>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 demo-col">
+                    <div class="icheck-material-grey">
+                        <input type="checkbox" checked="" id="grey">
+                        <label for="grey">خاکستری</label>
+                    </div>
+                    <div class="icheck-material-grey">
+                        <input type="radio" id="grey1" name="grey">
+                        <label for="grey1">خاکستری 1</label>
+                    </div>
+                    <div class="icheck-material-grey">
+                        <input type="radio" checked="" id="grey2" name="grey">
+                        <label for="grey2">خاکستری 2</label>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 demo-col">
+                    <div class="icheck-material-bluegrey">
+                        <input type="checkbox" checked="" id="bluegrey">
+                        <label for="bluegrey">آبی خاکستری</label>
+                    </div>
+                    <div class="icheck-material-bluegrey">
+                        <input type="radio" id="bluegrey1" name="bluegrey">
+                        <label for="bluegrey1">آبی خاکستری 1</label>
+                    </div>
+                    <div class="icheck-material-bluegrey">
+                        <input type="radio" checked="" id="bluegrey2" name="bluegrey">
+                        <label for="bluegrey2">آبی خاکستری 2</label>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div>
+            <h2>سایر دکمه های رادیو و چک باکس ها</h2>
+        </div>
+    </main>
+    
+
+</body>
+</html>
